@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+{% block content %}
+<ul class="list-group">
+  {% for item in story_list %}
+  <li class="list-group-item">
+      <span class="text-info">Name: </span> <span>{{ item.story.person }}</span>
+      <br>
+      <span class="text-info">Type: </span><span>{{ item.story.type }}</span>
+      <br>
+      <span class="text-info">Date: </span><span>{{ item.story.story_date }}</span>
+      <br>
+      <span class="text-info">Story: </span><span>{{ item.story.story }}</span>
+      <br>
+
+<!--      <span class="text-info">Number of comments: </span><span class="">{{ item.number_of_comments }}</span>-->
+<!--      <br>-->
+      <a class="btn btn-primary btn-sm active" role="button" aria-pressed="true" href="/story/{{ item.story.id }}/">Comments</a>
+      </span><span class="">-->{{ item.number_of_comments }}</span>
+      <br><br>
+  </li>
+
+  {% endfor %}
+</ul>
+{% endblock %}

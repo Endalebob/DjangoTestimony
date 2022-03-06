@@ -1,0 +1,53 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+      <link href="{% static 'stories/bootstrap.min.css' %}" rel="stylesheet">
+    <title>Testimony</title>
+    <link href="{% static 'stories/main.css' %}" rel="stylesheet">
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+          <a class="navbar-brand" href="/">{% block brand %}{% endblock %}</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div>
+              <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/stories/">Stories <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+              </li>
+            </ul>
+            </div>
+            <div class="mx-auto">
+              <form class="form-inline my-2 my-lg-0">
+                <input class="mx-auto form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="mx-auto btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            </div>
+          </div>
+        </nav>
+         {% block content %}
+        <h1 class="me">Welcome to Testimony!</h1>
+        <img class="img" src="{% static 'stories/welcome.jpg' %}">
+        {% endblock %}
+  <!-- Copyright -->
+  <footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="https://www.endaleyohannes.com"> Endale Publications</a>
+      <p>Website by: Endale Publications</p>
+      <p>Contact information: <a href="mailto:endaleyohannes8@gmail.com">email@endale.com</a></p>
+    </div>
+  </footer>
+  <!-- Copyright -->
+  </body>
+</html>

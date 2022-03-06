@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% block content %}
+      <br>
+
+      {% if not reviews %}
+            <hr>
+            <h3>Be the first one to write a comment.</h3>
+      {% else %}
+
+            <h3 class="text-success">Story Comment's</h3><br>
+<span class="text-info">story talker: </span> <span class="text-warning"><b><i>{{ book.person }}</i></b></span>
+                        <br><br>
+            <ul>
+            {% for review in reviews %}
+                  <li class="list-group-item">
+                        <span class="text-info">Comment given: </span> <span>{{ review.comment }}</span>
+                        <br>
+                        <span class="text-info">Date: </span><span>{{ review.comment_date }}</span>
+                        <br>
+                  </li>
+            {% endfor %}
+            </ul>
+      {% endif %}
+{% endblock %}
